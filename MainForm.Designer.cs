@@ -28,87 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            btnMin = new Button();
+            btnMax = new Button();
+            lblMoney = new Label();
+            lblCurrent = new Label();
+            lblSlot1 = new Label();
+            lblSlot2 = new Label();
+            lblSlot3 = new Label();
+            lblResult = new Label();
+            btnSpin = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnMin
             // 
-            button1.Location = new Point(521, 467);
-            button1.Name = "button1";
-            button1.Size = new Size(103, 31);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnMin.BackColor = Color.Transparent;
+            btnMin.Cursor = Cursors.Hand;
+            btnMin.FlatStyle = FlatStyle.Popup;
+            btnMin.Location = new Point(521, 467);
+            btnMin.Name = "btnMin";
+            btnMin.Size = new Size(103, 31);
+            btnMin.TabIndex = 0;
+            btnMin.UseVisualStyleBackColor = false;
+            btnMin.Click += btnMin_Click;
             // 
-            // button2
+            // btnMax
             // 
-            button2.Location = new Point(643, 466);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 31);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnMax.BackColor = Color.Transparent;
+            btnMax.Cursor = Cursors.Hand;
+            btnMax.FlatStyle = FlatStyle.Popup;
+            btnMax.Location = new Point(643, 466);
+            btnMax.Name = "btnMax";
+            btnMax.Size = new Size(107, 31);
+            btnMax.TabIndex = 1;
+            btnMax.UseVisualStyleBackColor = false;
+            btnMax.Click += btnMax_Click;
             // 
-            // label1
+            // lblMoney
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(78, 479);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 2;
-            label1.Text = "label1";
+            lblMoney.AutoSize = true;
+            lblMoney.BackColor = Color.Transparent;
+            lblMoney.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMoney.ForeColor = Color.Yellow;
+            lblMoney.Location = new Point(78, 479);
+            lblMoney.Name = "lblMoney";
+            lblMoney.Size = new Size(14, 15);
+            lblMoney.TabIndex = 2;
+            lblMoney.Text = "$";
+            lblMoney.Click += lblMoney_Click;
             // 
-            // label2
+            // lblCurrent
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(362, 393);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 3;
-            label2.Text = "label2";
+            lblCurrent.AutoSize = true;
+            lblCurrent.BackColor = Color.Transparent;
+            lblCurrent.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCurrent.ForeColor = Color.Yellow;
+            lblCurrent.Location = new Point(362, 393);
+            lblCurrent.Name = "lblCurrent";
+            lblCurrent.Size = new Size(14, 15);
+            lblCurrent.TabIndex = 3;
+            lblCurrent.Text = "$";
+            lblCurrent.Click += lblCurrent_Click;
             // 
-            // label3
+            // lblSlot1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(254, 280);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 4;
-            label3.Text = "label3";
+            lblSlot1.AutoSize = true;
+            lblSlot1.BackColor = Color.Transparent;
+            lblSlot1.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic);
+            lblSlot1.ForeColor = Color.Red;
+            lblSlot1.Location = new Point(273, 290);
+            lblSlot1.Name = "lblSlot1";
+            lblSlot1.Size = new Size(22, 30);
+            lblSlot1.TabIndex = 4;
+            lblSlot1.Text = "?";
+            lblSlot1.Click += lblSlot1_Click;
             // 
-            // label4
+            // lblSlot2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(355, 291);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 5;
-            label4.Text = "label4";
+            lblSlot2.AutoSize = true;
+            lblSlot2.BackColor = Color.Transparent;
+            lblSlot2.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic);
+            lblSlot2.ForeColor = Color.Red;
+            lblSlot2.Location = new Point(370, 292);
+            lblSlot2.Name = "lblSlot2";
+            lblSlot2.Size = new Size(22, 30);
+            lblSlot2.TabIndex = 5;
+            lblSlot2.Text = "?";
+            lblSlot2.Click += lblSlot2_Click;
             // 
-            // label5
+            // lblSlot3
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(465, 298);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 6;
-            label5.Text = "label5";
+            lblSlot3.AutoSize = true;
+            lblSlot3.BackColor = Color.Transparent;
+            lblSlot3.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic);
+            lblSlot3.ForeColor = Color.Red;
+            lblSlot3.Location = new Point(469, 292);
+            lblSlot3.Name = "lblSlot3";
+            lblSlot3.Size = new Size(22, 30);
+            lblSlot3.TabIndex = 6;
+            lblSlot3.Text = "?";
+            lblSlot3.Click += lblSlot3_Click;
             // 
-            // label6
+            // lblResult
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(357, 180);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 7;
-            label6.Text = "label6";
+            lblResult.AutoSize = true;
+            lblResult.BackColor = Color.Transparent;
+            lblResult.Font = new Font("Impact", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblResult.ForeColor = Color.Red;
+            lblResult.Location = new Point(300, 170);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(162, 29);
+            lblResult.TabIndex = 7;
+            lblResult.Text = "WILL YOU WIN?!";
+            lblResult.TextAlign = ContentAlignment.MiddleCenter;
+            lblResult.Click += lblResult_Click;
+            // 
+            // btnSpin
+            // 
+            btnSpin.BackColor = Color.Transparent;
+            btnSpin.Cursor = Cursors.Hand;
+            btnSpin.FlatStyle = FlatStyle.Popup;
+            btnSpin.Location = new Point(561, 199);
+            btnSpin.Name = "btnSpin";
+            btnSpin.Size = new Size(49, 45);
+            btnSpin.TabIndex = 8;
+            btnSpin.UseVisualStyleBackColor = false;
+            btnSpin.Click += btnSpin_Click;
             // 
             // MainForm
             // 
@@ -117,30 +161,33 @@
             BackgroundImage = Properties.Resources.SlotMachineMaddness;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(771, 521);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnSpin);
+            Controls.Add(lblResult);
+            Controls.Add(lblSlot3);
+            Controls.Add(lblSlot2);
+            Controls.Add(lblSlot1);
+            Controls.Add(lblCurrent);
+            Controls.Add(lblMoney);
+            Controls.Add(btnMax);
+            Controls.Add(btnMin);
             DoubleBuffered = true;
             Name = "MainForm";
             Text = "SlotMachineMaddness!";
+            Load += MainForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
+        private Button btnMin;
+        private Button btnMax;
+        private Label lblSlot1;
+        private Label lblSlot2;
+        private Label lblSlot3;
+        private Label lblMoney;
+        private Label lblCurrent;
+        private Label lblResult;
+        private Button btnSpin;
     }
 }
