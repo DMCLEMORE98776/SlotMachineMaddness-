@@ -19,7 +19,7 @@ namespace SlotMachineMaddness2026
         private void MainForm_Load(object sender, EventArgs e)
         {
 
-
+            // this is to show money and current bet before playing
             lblCurrent.Text = machine.currentBet.ToString();
             lblMoney.Text = machine.money.ToString();
             
@@ -27,7 +27,7 @@ namespace SlotMachineMaddness2026
 
 
         }
-
+        // this is your spin button action
         private void btnSpin_Click(object sender, EventArgs e)
         {
              lblResult.Text = "Good Luck!";
@@ -36,6 +36,7 @@ namespace SlotMachineMaddness2026
             machine.money -= machine.currentBet;
 
             //this is where the spin happens
+            // your slots show 3 different reults
             int[] result = machine.SpinSlots();
 
             lblSlot1.Text = result[0].ToString();
@@ -46,7 +47,8 @@ namespace SlotMachineMaddness2026
 
             
 
-            // machine.EvaluateSpin(result);
+            // your money will update based on the reults shown
+            // you have mul
             lblMoney.Text = machine.money.ToString();
 
             if (outcome == "JACKPOT")
@@ -64,7 +66,7 @@ namespace SlotMachineMaddness2026
 
 
         }
-
+        // these PVs are not needed per say - but app will crash without them
         private void lblSlot1_Click(object sender, EventArgs e)
 
         {
@@ -90,7 +92,8 @@ namespace SlotMachineMaddness2026
         {
 
         }
-
+        // these methods are the only ones being used - your bet buttons and spin button
+        // minBet button
         private void btnMin_Click(object sender, EventArgs e)
         {
             machine.currentBet += machine.minBet;
@@ -99,6 +102,8 @@ namespace SlotMachineMaddness2026
 
         }
 
+        //maxBet button
+        // each button either increases bet by 5 or 15
         private void btnMax_Click(object sender, EventArgs e)
         {
             machine.currentBet += machine.maxBet;
@@ -113,11 +118,12 @@ namespace SlotMachineMaddness2026
             lblCurrent.Text = machine.currentBet.ToString();
         }
 
+        // another method not used - more so for a label
         private void lblResult_Click(object sender, EventArgs e)
         {
 
         }
 
         
-    }
-}
+    } // this is the end of the form
+} // this is the end of the name space
